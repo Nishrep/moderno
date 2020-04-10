@@ -3,7 +3,7 @@
 @import 'fonts';
 
 
- /*Start header*/
+//  Start header
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -125,9 +125,9 @@
   }
 }
 
-/*End search*/
+// End search
 
-/*Start products*/
+// Start products
 .products {
   padding: 110px 0;
   background-color: $grey;
@@ -265,9 +265,9 @@
   }
 }
 
-/*End products*/
+// End products
 
-/*Start product slider*/
+// Start product slider
 .product-slider {
   padding: 110px 0 120px;
 
@@ -301,9 +301,9 @@
   }
 }
 
-/*End product slider*/
+// End product slider
 
-/*Start advantages*/
+// Start advantages
 .advantages {
   background-color: $bg;
   padding: 110px 0;
@@ -387,7 +387,7 @@
   }
 }
 
-/*End advantages*/
+// End advantages
 
 // Start author
 .author {
@@ -430,3 +430,38 @@
 }
 
 // End author
+
+// Start tutorial
+.tutorial {
+  padding: 70px 0 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+
+.tutorial__item {
+
+  &-images {
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-title {
+    background-color: #f8f8f8;
+    font-size: 24px;
+    text-align: center;
+    @include f700;
+    padding: 30px 10px;
+    color: $bg;
+    text-align: center;
+  }
+}
