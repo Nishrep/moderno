@@ -2,6 +2,7 @@
 .AppleDouble
 .LSOverride
 .vs
+.vscode
 .idea
 
 node_modules/
