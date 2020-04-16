@@ -47,3 +47,9 @@ $(function () {
 
 
 });
+
+$(document).ready(function(){
+   $('.menu__btn').click(function(event){
+      $('.menu__btn').toggleClass('active');
+   });
+});
