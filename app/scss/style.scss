@@ -563,6 +563,12 @@
   background-color: $grey;
 }
 
+.products__wrapper,
+.product-slider__wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .products__inner-btn {
   text-align: center;
   margin-bottom: 60px;
@@ -587,8 +593,13 @@
 
 .products__inner-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: -30px;
   flex-wrap: wrap;
+}
+.products .product__item {
+  flex-basis: calc(25% - 30px);
+  margin-left: 30px;
 }
 
 .product__item {
@@ -1341,9 +1352,10 @@ button.icon-unsorted {
 .product-page__content {
 
   .product__item {
-    max-width: 270px;
+    flex-basis: calc(33.3333% - 30px);
     background-color: #fff;
     transition: all .5s;
+    margin-left: 30px;
   }
 
   .product__item-img {
@@ -1377,6 +1389,7 @@ button.icon-unsorted {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  margin-left: -30px;
 }
 
 .pagination__list {
@@ -1459,6 +1472,7 @@ button.icon-unsorted {
 
   &.list {
     max-width: 100%;
+    flex-basis: 100%;
 
     .product__item-img {
       width: 240px;
@@ -1526,7 +1540,7 @@ button.icon-unsorted {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px;
 }
 
 .product-one__images {
@@ -1960,7 +1974,7 @@ button.icon-unsorted {
 }
 
 .about__box {
-  
+
   h3 {
     font-size: 20px;
     @include f700;
@@ -1983,7 +1997,7 @@ button.icon-unsorted {
 }
 
 .contact__inner {
-  padding:35px 40px 15px;
+  padding: 35px 40px 15px;
 }
 
 .contact__map {
@@ -2136,6 +2150,7 @@ button.icon-unsorted {
       &.active {
         border-bottom: 1px solid $green;
         color: #37474f;
+
         &::before {
           color: $green;
         }
@@ -2148,7 +2163,7 @@ button.icon-unsorted {
     }
   }
 
-  .tabs .tab + .tab {
+  .tabs .tab+.tab {
     border-left: none;
   }
 
@@ -2251,7 +2266,7 @@ button.icon-unsorted {
 }
 
 .profile-on {
-  
+
   &::before {
     background-color: $green;
   }
@@ -2327,7 +2342,7 @@ button.icon-unsorted {
   text-align: center;
   padding: 20px 5px 17px;
 
-  & + .profile__item {
+  &+.profile__item {
     border-left: 1px solid #dedede;
   }
 }
@@ -2349,7 +2364,7 @@ button.icon-unsorted {
 }
 
 .profile-settings {
-  
+
   .product-one__tabs.settings__tabs {
 
     .tabs span {
@@ -2389,7 +2404,7 @@ button.icon-unsorted {
 
 .personal-box__text {
   margin-bottom: 20px;
-  
+
   p {
     color: #707070;
   }
@@ -2477,10 +2492,6 @@ button.icon-unsorted {
     span {
       color: $green;
     }
-
-    &::placeholder {
-      color: #707070;
-    }
   }
 
   select,
@@ -2492,6 +2503,10 @@ button.icon-unsorted {
     height: 40px;
     background-color: #f9f9f9;
     padding: 0 18px;
+
+    &::placeholder {
+      color: #707070;
+    }
   }
 
   textarea {
@@ -2510,7 +2525,7 @@ button.icon-unsorted {
     right: auto;
     left: 9px;
     font-size: 12px;
-    line-height: 26px;  
+    line-height: 26px;
     padding: 0 12px;
     border: 1px solid #d7d7d7;
     border-left: 1px solid #d7d7d7;
@@ -2535,7 +2550,7 @@ button.icon-unsorted {
     box-sizing: border-box;
     width: 100%;
     height: 40px;
-    margin-left: 100px; 
+    margin-left: 100px;
     padding: 0;
     border: none;
     border-bottom-color: transparent;
@@ -2588,5 +2603,154 @@ button.icon-unsorted {
 }
 
 // End upload
+
+// Start withdrawals
+.withdrawals__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+
+.withdrawals__col {
+  max-width: 570px;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dedede;
+}
+
+.withdrawals__title {
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+  color: $bg;
+  @include f500;
+  font-size: 24px;
+}
+
+.withdrawals__content {
+  padding-left: 35px;
+  padding-right: 40px;
+
+  button {
+    margin-bottom: 50px;
+    color: #fff;
+    background-color: $green;
+    border: none;
+    padding: 15px 36px;
+    cursor: pointer;
+  }
+}
+
+.withdrawals__form-line {
+  margin-bottom: 25px;
+
+  label {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    @include f500;
+    margin-bottom: 15px;
+    color: $bg;
+
+    span {
+      color: $green;
+    }
+  }
+
+  input,
+  select {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+
+    &::placeholder {
+      color: #707070;
+    }
+  }
+
+  .jq-selectbox {
+    width: 100%;
+  }
+
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #707070;
+    text-shadow: none;
+    line-height: 40px;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+
+    &::before {
+      content: '\f0d7';
+      font-family: 'icomoon';
+    }
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+}
+
+.withdrawals__content-items {
+  padding-bottom: 35px;
+}
+
+.withdrawals__content-item {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #444;
+
+  &:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+}
+
+.withdrawals__content-date {
+  width: 154px;
+  padding-left: 20px;
+  @include f500;
+}
+
+.withdrawals__content-email {
+  width: 180px;
+  @include f500;
+}
+
+.withdrawals__content-price {
+  width: 70px;
+  @include f700;
+}
+
+.withdrawals__content-status {
+  width: 88px;
+  @include f700;
+
+  &.withdrawals__content-paid {
+    color: $green;
+  }
+}
+
+
+// End withdrawals
+
 
 @import 'media';
